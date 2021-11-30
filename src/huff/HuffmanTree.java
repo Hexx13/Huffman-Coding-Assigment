@@ -19,12 +19,11 @@ public class HuffmanTree {
 
         while((currString = buffReader.readLine())!= null){
             String[] str = currString.split("\t", 2);
-            list.add(i,new TreeNode(new HuffObject(str[0], Integer.parseInt(str[1]))));
-            i++;
+            list.add(i++,new TreeNode(new HuffObject(str[0], Integer.parseInt(str[1]))));
         }
         buffReader.close();
     }
 
-    
+
 
 }
