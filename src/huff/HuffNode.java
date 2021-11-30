@@ -1,11 +1,11 @@
 package huff;
 
-public class HuffObject {
+public class HuffNode {
     String letter;
     int frequency;
 
 
-    public HuffObject(String letter, int frequency) {
+    public HuffNode(String letter, int frequency) {
         this.letter = letter;
         this.frequency = frequency;
     }
