@@ -1,5 +1,6 @@
 package week1;
-
+import week5.*;
+import huff.*;
 // ********************************************************
 // Array-based implementation of the ADT list.
 // *********************************************************
@@ -93,6 +94,33 @@ public class ListArrayBased implements ListInterface
         "week1.ListIndexOutOfBoundsException on remove");
     }  // end if
   } //end remove
+
+
+  public void sort() {
+    for (int i = 0; i < size() - 1; i++) {
+      for (int j = 0; j < size() - 1; j++) {
+        //Storing the frequency values
+        int first = ((HuffNode) ((TreeNode) items[j])
+                .getItem())                .getFrequency();
+        int next = ((HuffNode) ((TreeNode) items[j + 1])
+                .getItem())
+                .getFrequency();
+
+
+        if (first <= next) {
+          //starts next iteration of the loop
+          continue;
+        }
+        //Temporary storage for the object stored in first
+        Object storage = items[j];
+
+        //Swaps the position of first and next
+        items[j] = items[j + 1];
+        items[j + 1] = storage;
+      }
+    }
+  }
+
 
   private int translate(int position)
   {

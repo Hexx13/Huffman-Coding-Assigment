@@ -1,5 +1,5 @@
 package huff;
-
+//TODO CHANGE THIS TO EXTEND TreeNode
 public class HuffNode {
     String letter;
     int frequency;
