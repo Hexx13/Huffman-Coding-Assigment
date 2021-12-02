@@ -36,7 +36,8 @@ public class HuffmanTree {
     //TODO Encode
     // - add Display Compression ratio
     public void encode(TreeNode node, String message, String code){
-
+        System.out.println(root);
+        System.out.println(((HuffNode)node.getItem()).getLetter());
         if(((HuffNode)node.getItem()).getLetter().equals(message)){
             enResult = code;
         }

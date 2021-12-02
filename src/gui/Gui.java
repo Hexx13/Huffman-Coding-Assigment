@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 //TODO GUI
 // - Dazzle it up~~~
@@ -18,8 +19,9 @@ public class Gui extends JFrame implements ActionListener {
     JPanel buttonPanel = new JPanel(new GridLayout(1, 2));
     HuffmanTree tree;
 
-    public Gui(HuffmanTree tree) {
+    public Gui(HuffmanTree tree) throws IOException {
         this.tree = tree;
+        tree.genTree();
         cPane.setLayout(new GridLayout(3, 1));
 
         cPane.add(new JPanel().add(in));
