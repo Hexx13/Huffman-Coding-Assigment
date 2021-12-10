@@ -46,9 +46,10 @@ public class Gui extends JFrame implements ActionListener {
         //TODO Gui Input
         // -Implement Validation
         if (e.getSource() == decodeBut) {
-            tree.decode(in.getText());
+            out.setText(Character.toString(tree.decode(in.getText())));
         } else if (e.getSource() == encodeBut) {
             tree.encode(tree.getRoot(), in.getText(),"");
+            System.out.println(tree.getEnResult());
             out.setText(tree.getEnResult());
         }
     }
